@@ -13,7 +13,11 @@
         </option>
       </select>
     </p>
-    <Icon name="uil:github" size="50px" @click="openWindow" />
+    <button
+      @click="openWindow"
+    >
+      <Icon name="uil:github" size="50px" />
+    </button>
   </div>
 </template>
 <script setup lang="ts">
