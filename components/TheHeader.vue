@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between mt-4 mx-4">
+  <div class="flex justify-between pt-4 mx-4">
     <p>
       <select
         v-model="$colorMode.preference"
