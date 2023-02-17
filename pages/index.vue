@@ -49,7 +49,7 @@
     />
   </div>
 </template>
-<script  setup lang="ts">
+<script setup lang="ts">
 const apiKey = ref()
 const promptString = ref()
 const imageUrl = ref('') as any
