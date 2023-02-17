@@ -4,9 +4,10 @@ export default defineNuxtConfig({
     // typeCheck: true
   },
   modules: [
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    '@nuxtjs/tailwindcss',
+    '@nuxt/image-edge',
     [
       '@pinia/nuxt',
       {
