@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-icon',
     '@nuxt/image-edge',
+    'nuxt-icon',
     [
       '@pinia/nuxt',
       {
