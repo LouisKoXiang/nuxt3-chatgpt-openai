@@ -33,10 +33,7 @@
       >
         <span>Image Generations</span>
       </button>
-      <span
-        v-if="errMsg"
-        class="text-red-500"
-      >
+      <span v-if="errMsg" class="text-red-500">
         {{ errMsg }}
       </span>
     </form>
@@ -49,28 +46,33 @@
     />
   </div>
 </template>
-<script setup lang="ts">
-const apiKey = ref()
-const promptString = ref()
-const imageUrl = ref('') as any
-const errMsg = ref('')
-const loading = ref(false)
-
-const createImage = async () => {
-  loading.value = true
-  errMsg.value = ''
-  const { data, error } = await useFetch('/api/openai-image', {
-    method: 'post',
-    body: {
-      apiKey: apiKey.value,
-      prompt: promptString.value
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
+  setup () {
+    const apiKey = ref()
+    const promptString = ref()
+    const imageUrl = ref('') as any
+    const errMsg = ref('')
+    const loading = ref(false)
+    const createImage = async () => {
+      loading.value = true
+      errMsg.value = ''
+      const { data, error } = await useFetch('/api/openai-image', {
+        method: 'post',
+        body: {
+          apiKey: apiKey.value,
+          prompt: promptString.value
+        }
+      })
+      imageUrl.value = data.value ?? ''
+      if (error.value) {
+        errMsg.value = error.value.data.data.error.message
+      }
+      loading.value = false
     }
-  })
-  imageUrl.value = data.value ?? ''
-  if (error.value) {
-    errMsg.value = error.value.data.data.error.message
-  }
-  loading.value = false
-}
 
+    return { apiKey, promptString, imageUrl, errMsg, loading, createImage }
+  }
+})
 </script>

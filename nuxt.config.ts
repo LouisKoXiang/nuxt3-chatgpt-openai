@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
   typescript: {
     // typeCheck: true
+    shim: false
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -34,5 +35,8 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: ''
-  }
+  },
+  css: [
+    '@vueform/multiselect/themes/default.css'
+  ]
 })
