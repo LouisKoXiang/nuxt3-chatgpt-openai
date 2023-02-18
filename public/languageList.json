@@ -1,0 +1,32 @@
+[
+    {
+        "value": "Traditional Chinese",
+        "label": "Traditional Chinese",
+        "disabled": false
+    },
+    {
+        "value": "Simplified Chinese",
+        "label": "Simplified Chinese",
+        "disabled": false
+    },
+    {
+        "value": "English",
+        "label": "English",
+        "disabled": "false"
+    },
+    {
+        "value": "French",
+        "label": "French",
+        "disabled": false
+    },
+    {
+        "value": "Portuguese",
+        "label": "Portuguese",
+        "disabled": false
+    },
+    {
+        "value": "Traditional Chinese",
+        "label": "Traditional Chinese",
+        "disabled": false
+    }
+]
