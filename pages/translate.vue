@@ -1,5 +1,9 @@
 <template>
   <div class="max-w-5xl py-8 px-4 mx-auto">
+    <Head>
+      <Title>Nuxt3 OpenAI Translation</Title>
+      <Meta name="description" content="Open AI One translation for multiple languages." />
+    </Head>
     <ClientOnly>
       <FullScreenLoading v-if="loading" />
       <h1 class="text-3xl font-bold py-6">

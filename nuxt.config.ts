@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      title: 'Image-Generation',
+      title: 'Nuxt3-OpenAI',
       meta: [
-        { name: 'description', content: 'Nuxt3 ChatGpt OpenAI Image Generation' }
+        { name: 'description', content: 'Nuxt3 Integrating with OpenAI' }
       ]
     }
   },

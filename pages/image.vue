@@ -1,5 +1,10 @@
 <template>
   <div class="max-w-5xl py-8 px-4 mx-auto">
+    <Head>
+      <Title>OpenAI Image Generations</Title>
+      <Meta name="description" content="ChatGPT OpenAI Image Generations" />
+      <Meta name="description" content="Nuxt3 OpenAI Image Generations" />
+    </Head>
     <FullScreenLoading v-if="loading" />
     <h1 class="text-3xl font-bold py-6">
       ChatGPT OpenAI Image Generations
