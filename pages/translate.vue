@@ -81,6 +81,11 @@ export default defineComponent({
     const translateText = async () => {
       loading.value = true
       errMsg.value = ''
+      if (!languageList.value) {
+        loading.value = false
+        errMsg.value = 'Check the languages you want to translate.'
+        return
+      }
       const languageListJoin = languageList.value.join()
       const TranslateCombo = 'Translate this into ' + languageListJoin + ': ' + promptString.value
       const { data, error } = await useFetch('/api/openai-translate', {
