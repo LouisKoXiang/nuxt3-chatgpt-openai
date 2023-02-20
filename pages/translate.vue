@@ -87,12 +87,12 @@ export default defineComponent({
         return
       }
       const languageListJoin = languageList.value.join()
-      const TranslateCombo = 'Translate this into ' + languageListJoin + ': ' + promptString.value
+      const translateCombo = 'Translate this into ' + languageListJoin + ': ' + promptString.value
       const { data, error } = await useFetch('/api/openai-translate', {
         method: 'post',
         body: {
           apiKey: apiKey.value,
-          prompt: TranslateCombo
+          prompt: translateCombo
         }
       })
       translateResult.value = data.value ?? ''

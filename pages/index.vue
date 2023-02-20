@@ -1,6 +1,8 @@
 <template>
   <div class="max-w-5xl py-8 px-4 mx-auto">
-    <h1 class="text-3xl font-bold py-6">Connect with Open AI</h1>
+    <h1 class="text-3xl font-bold py-6">
+      Connect with Open AI
+    </h1>
     <div class="grid grid-cols-6 gap-4">
       <!-- Translate Card-->
       <div
