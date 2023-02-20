@@ -14,7 +14,11 @@ export default <Partial<Config>>{
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active']
   },
+  content: [
+    './node_modules/flowbite/**/*.js'
+  ],
   plugins: [
-    tailwindForms
+    tailwindForms,
+    require('flowbite')
   ]
 }
