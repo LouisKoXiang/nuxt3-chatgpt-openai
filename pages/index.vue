@@ -1,78 +1,35 @@
 <template>
   <div class="max-w-5xl py-8 px-4 mx-auto">
-    <FullScreenLoading v-if="loading" />
-    <h1 class="text-3xl font-bold py-6">
-      ChatGPT OpenAI Image Generations
-    </h1>
-    <form
-      class="grid grid-cols-1 gap-6"
-      @submit.prevent="createImage"
-    >
-      <label class="block">
-        <span class="font-bold p-2 text-xl leading-7">API Key</span>
-        <input
-          v-model="apiKey"
-          type="text"
-          class="form-input mt-1 block w-full text-black"
-          placeholder="OpenAI Key"
-        >
-      </label>
-      <label class="block">
-        <span class="font-bold p-2 text-xl leading-7">Prompt</span>
-        <input
-          v-model="promptString"
-          type="text"
-          class="form-input mt-1 block w-full text-black"
-          placeholder="Image description"
-        >
-      </label>
-      <button
-        type="submit"
-        class="inline-flex justify-center items-center py-2 px-4
-        text-sm font-medium shadow-sm border border-black dark:border-white"
+    <h1 class="text-3xl font-bold py-6">Connect with Open AI</h1>
+    <div class="grid grid-cols-6 gap-4">
+      <!-- Translate Card-->
+      <div
+        class="col-start-1 col-end-7 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
-        <span>Image Generations</span>
-      </button>
-      <span v-if="errMsg" class="text-red-500">
-        {{ errMsg }}
-      </span>
-    </form>
-    <nuxt-img
-      v-if="imageUrl"
-      :src="imageUrl"
-      width="1024"
-      height="1024"
-      alt="image"
-    />
+        <Icon name="ic:baseline-translate" size="48px" />
+        <nuxt-link to="/translate">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            Use Open AI Translation into multiple languages at once.
+          </h5>
+          <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+            Check the languages you want to translate
+          </p>
+        </nuxt-link>
+      </div>
+      <!-- Image Card -->
+      <div
+        class="col-start-1 col-end-7 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <Icon name="ic:baseline-image" size="48px" />
+        <nuxt-link to="/image">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            Use Open AI generating images based on keywords.
+          </h5>
+          <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+            Generating images with a size of 1024x1024.
+          </p>
+        </nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-export default defineComponent({
-  setup () {
-    const apiKey = ref()
-    const promptString = ref()
-    const imageUrl = ref('') as any
-    const errMsg = ref('')
-    const loading = ref(false)
-    const createImage = async () => {
-      loading.value = true
-      errMsg.value = ''
-      const { data, error } = await useFetch('/api/openai-image', {
-        method: 'post',
-        body: {
-          apiKey: apiKey.value,
-          prompt: promptString.value
-        }
-      })
-      imageUrl.value = data.value ?? ''
-      if (error.value) {
-        errMsg.value = error.value.data.data.error.message
-      }
-      loading.value = false
-    }
-
-    return { apiKey, promptString, imageUrl, errMsg, loading, createImage }
-  }
-})
-</script>

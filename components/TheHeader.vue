@@ -31,7 +31,7 @@
         >
           <li>
             <nuxt-link
-              to="/Home"
+              to="/"
               class="block py-2 pl-3 pr-4 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
             >
               Home
@@ -47,7 +47,7 @@
           </li>
           <li>
             <nuxt-link
-              to="/"
+              to="/image"
               class="block py-2 pl-3 pr-4 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
             >
               Image
@@ -78,7 +78,7 @@
         <ul class="space-y-2">
           <li>
             <nuxt-link
-              to="/Home"
+              to="/"
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               @click="closeDrawer"
             >
@@ -98,7 +98,7 @@
           </li>
           <li>
             <nuxt-link
-              to="/"
+              to="/image"
               class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               @click="closeDrawer"
             >
