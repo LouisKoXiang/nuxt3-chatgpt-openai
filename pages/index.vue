@@ -1,12 +1,12 @@
 <template>
   <div class="max-w-5xl py-8 px-4 mx-auto">
-    <h1 class="text-3xl font-bold py-6">
+    <h1 class="text-3xl font-bold">
       Connect with Open AI
     </h1>
     <div class="grid grid-cols-6 gap-4">
       <!-- Translate Card-->
       <div
-        class="col-start-1 col-end-7 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="col-start-1 col-end-7 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <Icon name="ic:baseline-translate" size="48px" />
         <NuxtLink to="/translate">
@@ -20,7 +20,7 @@
       </div>
       <!-- Image Card -->
       <div
-        class="col-start-1 col-end-7 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="col-start-1 col-end-7 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <Icon name="ic:baseline-image" size="48px" />
         <NuxtLink to="/image">
@@ -144,3 +144,4 @@ export default defineComponent({
   }
 })
 </script>
+

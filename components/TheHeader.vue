@@ -1,10 +1,10 @@
 <template>
-  <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+  <nav class="bg-white border-gray-200 py-4 px-4 dark:bg-gray-800">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <p>
         <select
           v-model="$colorMode.preference"
-          class="border w-24 h-12 dark:bg-gray-900 dark:text-white dark:border-gray-700"
+          class="border w-24 h-12 dark:bg-gray-800 dark:text-white dark:border-white"
         >
           <option value="light">
             Light
@@ -61,7 +61,7 @@
       </div>
     </div>
   </nav>
-  <div class="max-w-2xl p-4 mx-auto">
+  <div class="max-w-2xl p-0 md:p-4 mx-auto">
     <!-- drawer component -->
     <div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
       <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
@@ -160,6 +160,6 @@ export default defineComponent({
     color: red !important;
     font-weight: bold;
     opacity: 1;
-    border-bottom: 4px solid red;;
+    border-bottom: 4px solid red;
   }
 </style>

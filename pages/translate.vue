@@ -6,8 +6,8 @@
     </Head>
     <ClientOnly>
       <FullScreenLoading v-if="loading" />
-      <h1 class="text-3xl font-bold py-6">
-        Open AI One translation for multiple languages.
+      <h1 class="text-3xl font-bold">
+        Open AI Translation into multiple languages at once.
       </h1>
       <form class="grid grid-cols-1 gap-6" @submit.prevent="translateText">
         <label class="block">
@@ -35,6 +35,7 @@
             mode="tags"
             placeholder="Check the languages you want to translate."
             :searchable="true"
+            :can-clear="false"
             :options="languageListOptions"
           />
         </label>
