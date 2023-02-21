@@ -94,7 +94,7 @@
                       dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
                       dark:focus:border-blue-500
                     "
-                    placeholder="Type product name"
+                    placeholder="https://platform.openai.com/account/api-keys"
                     required="true"
                   >
                 </div>
