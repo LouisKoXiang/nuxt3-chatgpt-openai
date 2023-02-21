@@ -59,6 +59,7 @@
 import Multiselect from '@vueform/multiselect'
 import { defineComponent, ref } from 'vue'
 import { SelectItem } from '@/model/SelectItem'
+import { userInfoStore } from '@/stores/user-info'
 
 export default defineComponent({
   components: {
@@ -72,6 +73,8 @@ export default defineComponent({
     const loading = ref(false)
     const languageList = ref()
     const languageListOptions = ref([] as SelectItem[])
+    const userInfo = userInfoStore()
+    apiKey.value = userInfo.openAiKey
 
     const fetchData = async () => {
       const result = await useFetch('/api/language', {

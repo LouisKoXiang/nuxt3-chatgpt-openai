@@ -53,6 +53,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { userInfoStore } from '@/stores/user-info'
 export default defineComponent({
   setup () {
     const apiKey = ref()
@@ -60,6 +61,8 @@ export default defineComponent({
     const imageUrl = ref('') as any
     const errMsg = ref('')
     const loading = ref(false)
+    const userInfo = userInfoStore()
+    apiKey.value = userInfo.openAiKey
     const createImage = async () => {
       loading.value = true
       errMsg.value = ''
