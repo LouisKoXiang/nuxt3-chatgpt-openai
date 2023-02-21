@@ -6,7 +6,7 @@
     </Head>
     <ClientOnly>
       <FullScreenLoading v-if="loading" />
-      <h1 class="text-3xl font-bold">
+      <h1 class="text-3xl pb-6 font-bold">
         Open AI Translation into multiple languages at once.
       </h1>
       <form class="grid grid-cols-1 gap-6" @submit.prevent="translateText">

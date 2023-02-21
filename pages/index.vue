@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-5xl py-8 px-4 mx-auto">
-    <h1 class="text-3xl font-bold">
+    <h1 class="text-3xl pb-6 font-bold">
       Connect with Open AI
     </h1>
     <div class="grid grid-cols-6 gap-4">

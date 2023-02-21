@@ -6,7 +6,7 @@
       <Meta name="description" content="Nuxt3 OpenAI Image Generations" />
     </Head>
     <FullScreenLoading v-if="loading" />
-    <h1 class="text-3xl font-bold">
+    <h1 class="text-3xl pb-6 font-bold">
       ChatGPT OpenAI Image Generations
     </h1>
     <form
