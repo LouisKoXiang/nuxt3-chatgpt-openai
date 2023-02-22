@@ -103,6 +103,14 @@
               <span class="ml-3">Image</span>
             </nuxt-link>
           </li>
+          <li @click="openWindow">
+            <button
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <Icon name="uil:github" size="24px" />
+              <span class="ml-3">Github</span>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -149,6 +157,7 @@ export default defineComponent({
 
     const openWindow = () => {
       window.open('https://github.com/LouisKoXiang')
+      drawer.value.hide()
     }
 
     return { closeDrawer, openDrawer, openWindow }
