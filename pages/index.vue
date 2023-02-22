@@ -11,10 +11,10 @@
         <Icon name="ic:baseline-translate" size="48px" />
         <NuxtLink to="/translate">
           <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            Use Open AI Translation into multiple languages at once.
+            Use Open AI Translation into multiple languages at once and generate an i18n language pack.
           </h5>
           <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
-            Check the languages you want to translate
+            You can generate an i18n language pack.
           </p>
         </NuxtLink>
       </div>

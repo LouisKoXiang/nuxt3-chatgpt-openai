@@ -1,8 +1,13 @@
-# Nuxt3 ChatGPT OpenAI Image Generation
-
+# Nuxt3 ChatGPT Connect OpenAI 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-Look at the [ChatGpt OPenAI documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [ChatGpt OPenAI documentation](https://platform.openai.com/account/api-keys) to learn more.
+
+## Feature
+
+1. OpenAI Translation into multiple languages at once and generate an i18n language pack.
+
+2. OpenAI Image Generations
 
 ## Setup
 
