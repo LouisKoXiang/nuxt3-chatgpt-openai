@@ -4,8 +4,11 @@
       <p>
         <select
           v-model="$colorMode.preference"
-          class="border w-24 h-12 dark:bg-gray-800 dark:text-white dark:border-white"
+          class="border w-26 h-12 dark:bg-gray-800 dark:text-white dark:border-white"
         >
+          <option value="system">
+            System
+          </option>
           <option value="light">
             Light
           </option>
