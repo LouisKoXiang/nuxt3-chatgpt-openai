@@ -29,7 +29,7 @@
           >
         </label>
         <label class="block">
-          <span class="font-bold p-2 text-xl leading-7">Check the languages you want to translate</span>
+          <span class="font-bold p-2 text-xl leading-7">Select the languages you want to translate</span>
           <Multiselect
             v-model="languageList"
             mode="tags"
@@ -51,7 +51,7 @@
         </span>
       </form>
       <span v-if="translateResult">
-        {{ translateResult }}
+        <json-viewer :value="translateResult" />
       </span>
     </ClientOnly>
   </div>
@@ -94,8 +94,14 @@ export default defineComponent({
         errMsg.value = 'Check the languages you want to translate.'
         return
       }
-      const languageListJoin = languageList.value.join()
-      const translateCombo = 'Translate this into ' + languageListJoin + ': ' + promptString.value
+
+      let languageListCombo = ''
+      const iterator = languageList.value.keys()
+      for (const key of iterator) {
+        languageListCombo += (key + 1) + '. ' + languageList.value[key] + ', '
+      }
+      const translateCombo = " ' " + 'Translate this into ' + languageListCombo + ' Just reponse with json : ' + promptString.value + "'"
+
       const { data, error } = await useFetch('/api/openai-translate', {
         method: 'post',
         body: {

@@ -1,32 +1,32 @@
 [
     {
-        "value": "Traditional Chinese",
-        "label": "Traditional Chinese",
+        "value": "zh-tw",
+        "label": "繁體中文",
         "disabled": false
     },
     {
-        "value": "Simplified Chinese",
-        "label": "Simplified Chinese",
+        "value": "zh-cn",
+        "label": "簡體中文",
         "disabled": false
     },
     {
-        "value": "English",
+        "value": "us",
         "label": "English",
         "disabled": "false"
     },
     {
-        "value": "French",
-        "label": "French",
+        "value": "ko",
+        "label": "한국어",
         "disabled": false
     },
     {
-        "value": "Portuguese",
-        "label": "Portuguese",
+        "value": "jp",
+        "label": "日本語",
         "disabled": false
     },
     {
-        "value": "Traditional Chinese",
-        "label": "Traditional Chinese",
+        "value": "th",
+        "label": "ไทย",
         "disabled": false
     }
 ]
