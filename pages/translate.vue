@@ -100,7 +100,7 @@ export default defineComponent({
       for (const key of iterator) {
         languageListCombo += (key + 1) + '. ' + languageList.value[key] + ', '
       }
-      const translateCombo = " ' " + 'Translate this into ' + languageListCombo + ' Just reponse with json : ' + promptString.value + "'"
+      const translateCombo = " ' " + 'Translate this into ' + languageListCombo + ' Just reponse with json : ' + ' ' + promptString.value + "'"
 
       const { data, error } = await useFetch('/api/openai-translate', {
         method: 'post',
