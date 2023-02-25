@@ -3,6 +3,10 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 Look at the [ChatGpt OPenAI documentation](https://platform.openai.com/account/api-keys) to learn more.
 
+## Demo
+
+![Preview 1](/demo/demo_translate.png)
+
 ## Feature
 
 1. OpenAI Translation into multiple languages at once and generate an i18n language pack.
